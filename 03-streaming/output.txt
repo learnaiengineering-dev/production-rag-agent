@@ -1,0 +1,29 @@
+# Raw output, 5 Nov 2026, anthropic 2.4.0, Python 3.13.18 (Linux sandbox), 5 runs each
+# Normal mode: before.py x5, after.py x5, timeline.py x1. Break mode: naive_stream.py x5, after.py x5.
+
+== normal server
+before run 1: first words on screen after 6.2 s
+before run 2: first words on screen after 6.2 s
+before run 3: first words on screen after 6.2 s
+before run 4: first words on screen after 6.2 s
+before run 5: first words on screen after 6.2 s
+after run 1: first words: 0.4 s, all 59: 6.3 s
+after run 2: first words: 0.4 s, all 59: 6.3 s
+after run 3: first words: 0.4 s, all 59: 6.3 s
+after run 4: first words: 0.4 s, all 59: 6.3 s
+after run 5: first words: 0.4 s, all 59: 6.3 s
+waiting: all 59 words appear at once after 6.2 s
+streaming: first word after 0.4 s, last word after 6.2 s
+== break server
+naive run 1: done: 29 words, no error raised
+naive run 2: done: 29 words, no error raised
+naive run 3: done: 29 words, no error raised
+naive run 4: done: 29 words, no error raised
+naive run 5: done: 29 words, no error raised
+after-break run 1: Answer interrupted at 29 words. Retry?
+after-break run 2: Answer interrupted at 29 words. Retry?
+after-break run 3: Answer interrupted at 29 words. Retry?
+after-break run 4: Answer interrupted at 29 words. Retry?
+after-break run 5: Answer interrupted at 29 words. Retry?
+
+# timeline.py in break mode: first word 0.4 s, last word 3.2 s (29 words), waiting 6.2 s
