@@ -1,0 +1,68 @@
+# Raw output: 20 users at once, 5 runs per way of building it. 6 Nov 2026, Linux sandbox, Python 3.13.18, anthropic 2.4.0.
+# Mock server: a working model answers after 0.5 s; a model that is down answers 529 overloaded after 0.3 s.
+
+## python mock_server.py          (claude-sonnet-5-5 down, claude-haiku-5-5 working)
+none run 1: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+none run 2: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.3 s, slowest 2.4 s
+none run 3: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.3 s
+none run 4: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+none run 5: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+after_retries run 1: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 2.8 s, slowest 2.9 s
+after_retries run 2: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 2.7 s, slowest 2.9 s
+after_retries run 3: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 2.7 s, slowest 2.9 s
+after_retries run 4: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 2.8 s, slowest 2.9 s
+after_retries run 5: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 2.8 s, slowest 2.9 s
+first run 1: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+first run 2: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+first run 3: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+first run 4: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+first run 5: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+last_resort run 1: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.8 s, slowest 0.9 s
+last_resort run 2: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+last_resort run 3: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+last_resort run 4: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+last_resort run 5: 20 of 20 answered (backup 20, friendly message 0, error 0), typical wait 0.9 s, slowest 0.9 s
+
+## python mock_server.py all-down (both down)
+none run 1: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+none run 2: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.3 s, slowest 2.4 s
+none run 3: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.3 s
+none run 4: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+none run 5: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.2 s, slowest 2.4 s
+after_retries run 1: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.5 s, slowest 2.7 s
+after_retries run 2: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.5 s, slowest 2.6 s
+after_retries run 3: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.6 s, slowest 2.7 s
+after_retries run 4: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.5 s, slowest 2.7 s
+after_retries run 5: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 2.6 s, slowest 2.7 s
+first run 1: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 0.7 s, slowest 0.7 s
+first run 2: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 0.7 s, slowest 0.7 s
+first run 3: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 0.7 s, slowest 0.7 s
+first run 4: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 0.7 s, slowest 0.7 s
+first run 5: 0 of 20 answered (backup 0, friendly message 0, error 20), typical wait 0.7 s, slowest 0.7 s
+last_resort run 1: 0 of 20 answered (backup 0, friendly message 20, error 0), typical wait 0.7 s, slowest 0.7 s
+last_resort run 2: 0 of 20 answered (backup 0, friendly message 20, error 0), typical wait 0.7 s, slowest 0.7 s
+last_resort run 3: 0 of 20 answered (backup 0, friendly message 20, error 0), typical wait 0.6 s, slowest 0.7 s
+last_resort run 4: 0 of 20 answered (backup 0, friendly message 20, error 0), typical wait 0.7 s, slowest 0.7 s
+last_resort run 5: 0 of 20 answered (backup 0, friendly message 20, error 0), typical wait 0.7 s, slowest 0.7 s
+
+## python mock_server.py ok       (both working)
+none run 1: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.6 s, slowest 0.6 s
+none run 2: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+none run 3: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+none run 4: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+none run 5: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+after_retries run 1: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+after_retries run 2: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+after_retries run 3: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+after_retries run 4: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+after_retries run 5: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+first run 1: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+first run 2: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+first run 3: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+first run 4: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+first run 5: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+last_resort run 1: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+last_resort run 2: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+last_resort run 3: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+last_resort run 4: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
+last_resort run 5: 20 of 20 answered (backup 0, friendly message 0, error 0), typical wait 0.5 s, slowest 0.5 s
