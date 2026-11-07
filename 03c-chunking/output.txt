@@ -1,0 +1,24 @@
+Document: 1370 characters, 10 questions, chunk size 300
+
+1. Fixed 300 characters, no overlap   : 5 chunks | answer in the top chunk: 6 of 10 | in the top 3: 8 of 10 | facts cut across two chunks: 1
+2. Fixed 300 characters, 60 overlap  : 6 chunks | answer in the top chunk: 8 of 10 | in the top 3: 10 of 10 | facts cut across two chunks: 0
+3. Whole sentences, up to 300 chars: 6 chunks | answer in the top chunk: 7 of 10 | in the top 3: 9 of 10 | facts cut across two chunks: 0
+
+Questions the fixed, no-overlap split got wrong:
+  - How many days do I have to return a sale item?  (fact is split across two chunks)
+  - How long until I get my refund after you receive the item?  (fact is whole, but another chunk scored higher)
+  - Does store credit expire?  (fact is whole, but another chunk scored higher)
+  - Can I return a personalised item?  (fact is whole, but another chunk scored higher)
+
+One example, in full (setup 1):
+  Question: How many days do I have to return a sale item?
+  Chunk returned (1 of 5) ends with:  "...int. Sale items can be returned within 1"
+  The cut falls here:  "...items can be returned within 1" | "4 days of delivery, not 30.  F..."
+
+Does the answer depend on the chunk size? (top-chunk hits out of 10 / facts cut in two)
+  size | fixed, no overlap | fixed, 20% overlap | whole sentences
+   150 |  5 / 1             |  5 / 0              |  8 / 0 
+   200 |  7 / 0             |  7 / 0              |  7 / 0 
+   300 |  6 / 1             |  8 / 0              |  7 / 0 
+   400 |  6 / 0             |  9 / 0              |  9 / 0 
+   600 |  8 / 0             |  8 / 0              |  8 / 0 
