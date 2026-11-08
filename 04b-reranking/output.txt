@@ -1,0 +1,79 @@
+Document: 1370 characters, 10 questions. First stage fetches 3 candidates; the reranker reorders them.
+
+=== Round 1: exact words only (written once, before seeing any result) ===
+
+Chunks: fixed 300 characters, 60 overlap (6 chunks), 3 candidates
+  right chunk first, before rerank : 8 of 10
+  right chunk first, after rerank  : 8 of 10
+  right chunk in the 3 candidates   : 10 of 10  (the most a reranker can reach)
+  fixed by rerank: 0 | made worse by rerank: 0
+  pairs the reranker had to score  : 30 (10 questions x 3 candidates)
+
+Rank table, question by question (position of the right chunk; '-' = not in the candidates):
+  before 2 -> after 2 | How many days do I have to return a sale item?
+  before 1 -> after 1 | Who pays return shipping for a faulty item?
+  before 1 -> after 1 | How long until I get my refund after you receive the item?
+  before 1 -> after 1 | What happens to a gift card purchase refund?
+  before 1 -> after 1 | Does store credit expire?
+  before 2 -> after 3 | Can I return a personalised item?
+  before 1 -> after 1 | How do I start a return?
+  before 1 -> after 1 | What do I need to send for a faulty item?
+  before 1 -> after 1 | Can I exchange an item after the 30 day window?
+  before 1 -> after 1 | Can I return food or fuel canisters?
+
+How many candidates should the reranker see? (right chunk first, out of 10; chunks: fixed 300, 60 overlap)
+  candidates | before | after | in candidates | pairs scored
+           1 |      8 |     8 |             8 |           10
+           2 |      8 |     8 |            10 |           20
+           3 |      8 |     8 |            10 |           30
+           5 |      8 |     8 |            10 |           50
+           6 |      8 |     8 |            10 |           60
+
+Does it help for every way of cutting? (right chunk first, out of 10: before -> after reranking the top 3)
+  size | fixed, no overlap | fixed, 20% overlap | whole sentences
+   150 |  5 ->  4          |  5 ->  4           |  8 ->  6
+   200 |  7 ->  7          |  7 ->  6           |  7 ->  6
+   300 |  6 ->  6          |  8 ->  8           |  7 ->  6
+   400 |  6 ->  8          |  9 ->  9           |  9 ->  9
+   600 |  8 ->  8          |  8 ->  8           |  8 ->  8
+
+Across the 15 setups (150 questions in total):
+  right chunk first before reranking : 108
+  right chunk in the top 3 at all    : 141  (the most any reranker could reach)
+  right chunk first after reranking  : 103
+  fixed by the reranker: 3 | made worse by the reranker: 8
+
+=== Round 2: same code, but word endings ('s', 'ed') stripped in both stages (changed after seeing round 1) ===
+
+Chunks: fixed 300 characters, 60 overlap (6 chunks), 3 candidates
+  right chunk first, before rerank : 8 of 10
+  right chunk first, after rerank  : 10 of 10
+  right chunk in the 3 candidates   : 10 of 10  (the most a reranker can reach)
+  fixed by rerank: 2 | made worse by rerank: 0
+  pairs the reranker had to score  : 30 (10 questions x 3 candidates)
+
+Rank table, question by question (position of the right chunk; '-' = not in the candidates):
+  before 2 -> after 1 | How many days do I have to return a sale item?
+  before 1 -> after 1 | Who pays return shipping for a faulty item?
+  before 1 -> after 1 | How long until I get my refund after you receive the item?
+  before 1 -> after 1 | What happens to a gift card purchase refund?
+  before 1 -> after 1 | Does store credit expire?
+  before 2 -> after 1 | Can I return a personalised item?
+  before 1 -> after 1 | How do I start a return?
+  before 1 -> after 1 | What do I need to send for a faulty item?
+  before 1 -> after 1 | Can I exchange an item after the 30 day window?
+  before 1 -> after 1 | Can I return food or fuel canisters?
+
+Does it help for every way of cutting? (right chunk first, out of 10: before -> after reranking the top 3)
+  size | fixed, no overlap | fixed, 20% overlap | whole sentences
+   150 |  5 ->  5          |  6 ->  5           |  8 ->  8
+   200 |  8 ->  9          |  9 ->  9           |  9 ->  9
+   300 |  7 ->  8          |  8 -> 10           |  8 ->  9
+   400 |  7 ->  9          |  7 ->  9           |  7 ->  9
+   600 |  8 ->  9          |  8 -> 10           |  9 -> 10
+
+Across the 15 setups (150 questions in total):
+  right chunk first before reranking : 114
+  right chunk in the top 3 at all    : 143  (the most any reranker could reach)
+  right chunk first after reranking  : 128
+  fixed by the reranker: 16 | made worse by the reranker: 2
