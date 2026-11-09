@@ -1,0 +1,41 @@
+20 parts, 25 questions. Right part ranked first (top 3 in brackets).
+
+  question type                      | keyword   | meaning   | hybrid
+  part number typed exactly (10)     | 10/10 (10) | 8/10 (8)  | 10/10 (10)
+  no part number, own words (10)     | 7/10 (7)  | 5/10 (8)  | 6/10 (8)
+  part number typed differently (5)  | 1/5 (4)   | 4/5 (4)   | 2/5 (5)
+  all questions (25)                 | 18/25 (21) | 17/25 (20) | 18/25 (23)
+
+Exact part-number questions where the first pick was a near-identical part number (e.g. XR-4471-B for XR-4471-D):
+  keyword 0 | meaning 0 | hybrid 0  (out of 10)
+
+Hybrid compared with the better of keyword and meaning, question by question (position of the right part):
+  as good: 18 | better than both: 2 | worse: 5  (out of 25)
+
+Position of the right part, question by question (1 = first):
+  type    kw  mn  hy | question
+  id       1   1   1 | What torque for the gland bolts on XR-4471-D?
+  id       1   1   1 | Is XR-4417-B brass or stainless?
+  id       1   1   1 | What does the flashing red light on LM-7720-C mean?
+  id       1   1   1 | At what pressure does TK-0932 cut off?
+  id       1   4   1 | How often should I clean BN-1150?
+  id       1   4   1 | Does XR-4471-B fit the HP-400?
+  id       1   1   1 | Can I add WD-8808 six weeks after buying?
+  id       1   1   1 | What rating does the hose BN-1105 have?
+  id       1   1   1 | How long does the battery in HF-6100 last?
+  id       1   1   1 | Do I recalibrate HF-6016 after changing the impeller?
+  words    1   2   1 | My HP-200 is dripping near the shaft. What do I replace?
+  words    1   1   1 | The pump hums but no water comes out.
+  words    1   1   1 | My HP-400 stops and flashes red, and the motor feels hot.
+  words    6   1   2 | How do I protect the pump from freezing weather?
+  words    1   1   1 | The pump keeps running even though the tank is empty.
+  words    5   6   4 | My HP-200 makes a rattling sound and barely pushes any water.
+  words    1   2   1 | How do I cut down on vibration from the base?
+  words    1   1   1 | What happens when the pressure gets too high, and how do I get going again?
+  words   15  11  16 | How long am I covered if something breaks?
+  words    1   2   2 | Do I need an electrician to connect the HP-400 to power?
+  messy    2   1   2 | torque for xr 4471 d gland bolts
+  messy    3  10   2 | xr4417b material
+  messy    2   1   1 | lm7720c red light
+  messy    1   1   1 | tk 0932 cutoff pressure
+  messy    9   1   3 | BN1150 cleaning interval
