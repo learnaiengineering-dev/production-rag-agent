@@ -1,0 +1,39 @@
+20 replies we wrote (not from a real model). Pass = a usable dict that matches the schema.
+
+  layer                                          | json.loads works | matches the schema
+  1  json.loads on the raw reply                 | 11 of 20          |  1 of 20
+  2  + pull the JSON out of the reply            | 14 of 20          |  4 of 20
+  3  + schema check and safe repairs             |                  |  8 of 20
+  4  the other 12: send the errors back and ask again (retry)
+
+Reply by reply:  raw = json.loads works / schema ok on the raw reply;  final = usable after layer 3
+
+  reply                          raw parses  raw valid  final  what happened
+  valid JSON, nothing else       yes         yes        yes    as it was
+  wrapped in a code fence        no          no         yes    extracted the JSON from the reply
+  sentence before the JSON       no          no         yes    extracted the JSON from the reply
+  sentence after the JSON        no          no         yes    extracted the JSON from the reply
+  trailing comma                 no          no         yes    removed a trailing comma
+  single quotes                  no          no         no     RETRY: not valid JSON: Expecting property name enclosed in double quotes (line 1 column 2)
+  Python True instead of true    no          no         no     RETRY: not valid JSON: Expecting value (line 1 column 55)
+  cut off by the token limit     no          no         no     RETRY: JSON is cut off (never closed)
+  an array holding the object    yes         no         no     RETRY: expected a JSON object, got list
+  priority is the word high      yes         no         no     RETRY: priority: expected integer, got str 'high'
+  priority is the text 2         yes         no         yes    priority: text number to integer
+  category is Billing            yes         no         yes    category: lower-cased
+  category is refund             yes         no         no     RETRY: category: 'refund' is not one of ['billing', 'bug', 'account', 'other']
+  needs_human is missing         yes         no         no     RETRY: needs_human: missing
+  an extra field                 yes         no         yes    confidence: unknown field dropped
+  summary is null                yes         no         no     RETRY: summary: expected string, got NoneType None
+  summary is too long            yes         no         no     RETRY: summary: 196 characters, the limit is 140
+  keys capitalised               yes         no         no     RETRY: category: missing; priority: missing; needs_human: missing; summary: missing
+  two objects in a row           no          no         no     RETRY: more than one JSON value in the reply
+  a refusal in words             no          no         no     RETRY: no JSON found
+
+Example retry message for 'category is refund':
+
+Your last reply could not be used:
+- category: 'refund' is not one of ['billing', 'bug', 'account', 'other']
+Reply again with only a JSON object that matches the schema.
+
+Replies where json.loads worked on the raw text but the schema check failed: 10 of 20

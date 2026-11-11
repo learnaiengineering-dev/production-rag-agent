@@ -1,0 +1,26 @@
+PART 1. A toy sampler (invented word scores), 20 runs at each temperature.
+
+  temperature | different answers in 20 runs | most common answer appeared
+  0           |   1                          | 20 of 20
+  0.3         |   9                          | 9 of 20
+  0.7         |  11                          | 3 of 20
+  1.0         |  18                          | 3 of 20
+  1.5         |  15                          | 3 of 20
+
+  Chance the single top word is picked at each choice (word 1 'wrong' / word 2 'measure' / word 3 'early'):
+    temperature 0.3: 0.92 / 0.79 / 0.81
+    temperature 0.7: 0.62 / 0.52 / 0.57
+    temperature 1.0: 0.51 / 0.44 / 0.50
+    temperature 1.5: 0.42 / 0.38 / 0.44
+
+  Temperature 0, all 20 runs: The biggest risk is wrong answers, so measure them early.
+
+PART 2. Temperature 0, so the top word always wins. Same numbers, added up in 20 different orders (32-bit floats).
+
+  Word A's total came out as 15 different 32-bit values over 20 orders (spread 0.000086, standard deviation 0.000019).
+  A near-tie is defined as a true gap equal to one standard deviation of that rounding noise.
+
+  clear lead (gap 0.5)           true gap 0.500000 | word A wins 20 of 20, word B wins 0 of 20
+  near-tie (gap 0.000019)        true gap 0.000019 | word A wins 16 of 20, word B wins 4 of 20
+
+  A score of about 22.6 was added up from 2048 numbers each time.
