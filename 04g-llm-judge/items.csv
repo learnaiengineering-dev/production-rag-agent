@@ -1,0 +1,13 @@
+id,question,answer,reference,human
+j01,What is the max pressure for the BN-1105?,The BN-1105 is rated to 1105 kPa.,1105 kPa,pass
+j02,Which seal kit fits the HP-400?,Use seal kit XR-4471-D.,XR-4471-D,pass
+j03,Is the LM-7720-A compatible with the HP-200?,"Yes, the LM-7720-A works with the HP-200.",yes compatible,pass
+j04,What shaft size does the XR-4417-D need?,A 12 mm shaft.,12 mm,pass
+j05,What is the torque spec for the HP-400 seal kit?,Torque matters a lot for the HP-400 seal kit; be sure to torque the seal kit on the HP-400 properly.,25 Nm,fail
+j06,What is the part number QS-3308?,QS-3308,QS-3308,pass
+j07,What is the cable length for the HP-400?,The impeller is stainless steel.,2 metres,fail
+j08,Can the HP-200 run outdoors?,"Yes, it is rated for outdoor use.",yes outdoor rated,pass
+j09,Red light on the HP-200 and the motor stopped. What do I do?,Check the power light.,stop isolate power call service,fail
+j10,What diameter is the BN-1105?,"11 mm, and it is also waterproof to 50 m.",11 mm,pass
+j11,Does the VR-5010 need a special fuse?,"Yes, it needs a 5A fuse, I think, possibly.",yes 5A fuse,fail
+j12,Give the part number for the HP-400 seal kit.,XR-4471-D,XR-4471-D,pass

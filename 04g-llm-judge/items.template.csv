@@ -1,0 +1,3 @@
+id,question,answer,reference,human
+j01,your question here,the answer your system gave,the correct answer in a few words,pass
+j02,another question,another system answer,correct answer,fail

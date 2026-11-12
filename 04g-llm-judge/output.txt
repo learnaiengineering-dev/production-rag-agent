@@ -1,0 +1,31 @@
+Day 12 - LLM-as-judge: measuring a judge against your labels
+================================================================
+System under test: 12 open-ended answers, pump-parts help desk.
+Human = the label we wrote by hand (ground truth).
+Exact = strict string match. Stand-in = term-overlap rule (NOT an LLM).
+
+id  human  exact  stand-in note
+----------------------------------------------------------------
+j01 pass   fail   pass     exact false-fail
+j02 pass   fail   pass     exact false-fail
+j03 pass   fail   pass     exact false-fail
+j04 pass   fail   pass     exact false-fail
+j05 fail   fail   fail     
+j06 pass   pass   pass     
+j07 fail   fail   fail     
+j08 pass   fail   pass     exact false-fail
+j09 fail   fail   fail     
+j10 pass   fail   pass     exact false-fail
+j11 fail   fail   pass     stand-in false-pass
+j12 pass   pass   pass     
+
+Agreement with the human labels (12 items):
+  exact match : 6/12 = 50%  (false pass 0, false fail 6)
+  stand-in    : 11/12 = 92%  (false pass 1, false fail 0)
+
+Reading it:
+- Exact match fails most correct paraphrases: high false-fail.
+- The stand-in judge agrees more, but still lets wrong answers pass
+  (false-pass) when they happen to contain the right words.
+- Whatever the judge, the only number that matters first is its
+  agreement with YOUR labels. A judge you have not measured is a guess.

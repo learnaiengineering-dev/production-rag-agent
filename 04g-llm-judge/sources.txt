@@ -1,0 +1,6 @@
+Zheng, L., Chiang, W.-L., Sheng, Y., et al. (2023).
+"Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena."
+NeurIPS 2023 (Datasets and Benchmarks Track). arXiv:2306.05685.
+https://arxiv.org/abs/2306.05685
+- GPT-4 judge vs human agreement > 80% (approx. same as human-human; ~85% vs ~81% in one setup).
+- Named biases: position bias, verbosity bias, self-enhancement bias; mitigation via swapping positions.
