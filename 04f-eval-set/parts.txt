@@ -1,0 +1,20 @@
+XR-4471-B | Shaft seal kit for the HP-200 pump. Replace it when water drips from the housing near the shaft. Torque the gland bolts to 12 Nm.
+XR-4471-D | Shaft seal kit for the HP-400 pump. Replace it when water drips from the housing near the shaft. Torque the gland bolts to 18 Nm.
+XR-4417-B | Impeller for the HP-200 pump, made of brass. Fits a 16 mm shaft. Replace it if the pump is noisy or the flow is weak.
+XR-4417-D | Impeller for the HP-400 pump, made of stainless steel. Fits a 22 mm shaft. Replace it if the pump is noisy or the flow is weak.
+TK-0932 | Pressure switch. It cuts the pump off at 4.5 bar. Press the red button to reset it once the pressure has dropped.
+TK-0392 | Float switch for the sump. It stops the pump when the tank runs dry. Keep 10 cm of clear space around the float.
+LM-7720-A | Control board for the HP-200. A flashing red light means a motor overload. Disconnect the power for 30 seconds to reset it.
+LM-7720-C | Control board for the HP-400. A flashing red light means an over-temperature fault. Let the motor cool for 20 minutes, then restart.
+BN-1150 | Inlet filter. Clean it every 3 months. A clogged filter reduces the flow.
+BN-1105 | Outlet hose, 25 mm, rated to 6 bar.
+QS-3308 | Drain plug with washer. Fit a new washer every time the plug is removed.
+QS-3380 | Mounting feet, set of 4. Use the rubber pads to reduce vibration noise from the base.
+VR-5001 | Power cable for the HP-200, 3 m, with a plug. No electrician needed.
+VR-5010 | Power cable for the HP-400, 5 m, hardwired. An electrician must connect it.
+WD-8800 | Standard warranty. It covers manufacturing faults for 24 months. Keep your invoice.
+WD-8808 | Extended warranty. It adds 12 months and must be bought within 30 days of purchase.
+ZP-2201 | Priming kit. If the pump runs but moves no water, it has lost its prime. Fill the housing with water and restart.
+ZP-2210 | Winter storage kit. Drain the pump before frost so the housing does not crack.
+HF-6100 | Timer module. It schedules daily pump runs. The CR2032 battery lasts about 2 years.
+HF-6016 | Flow sensor. It reads litres per minute. Recalibrate it after changing the impeller.

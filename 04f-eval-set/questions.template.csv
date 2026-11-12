@@ -1,0 +1,5 @@
+id,tag,question,expected
+q01,easy,<a question a real user asked>,<the one thing a correct answer must be or contain>
+q02,own words,<the same need, phrased the way people actually say it>,<expected>
+q03,typed oddly,<a typo, shorthand or a missing space>,<expected>
+q04,hard,<a case that has already gone wrong once>,<expected>

@@ -1,0 +1,48 @@
+20 questions, 4 kinds. Each has one expected part; it passes when that part is ranked first.
+
+The grid (one row per question):
+  id   kind        kw    mn    hy    | question
+  q01  exact id    pass  pass  pass  | What is the shaft size for impeller XR-4417-D?
+  q02  exact id    pass  pass  pass  | What diameter is BN-1105?
+  q03  exact id    pass  pass  pass  | What size battery does the HF-6100 timer use?
+  q04  exact id    pass  pass  pass  | How long should I disconnect the power on LM-7720-A?
+  q05  exact id    pass  pass  pass  | Do I need to fit a new washer on QS-3308?
+  q06  own words   pass  FAIL  pass  | How often do I need to clean the intake strainer?
+  q07  own words   pass  FAIL  pass  | Which part tells me how many litres per minute are flowing?
+  q08  own words   FAIL  FAIL  FAIL  | Can I buy more warranty after the first month?
+  q09  own words   pass  FAIL  pass  | Which cable can I plug in myself without an electrician?
+  q10  own words   FAIL  FAIL  FAIL  | The water level in the sump is too low and the pump should stop.
+  q11  typed oddly FAIL  FAIL  FAIL  | xr 4417 d shaft size
+  q12  typed oddly FAIL  FAIL  FAIL  | bn1105 pressure rating
+  q13  typed oddly pass  FAIL  pass  | lm 7720 a reset
+  q14  typed oddly pass  FAIL  FAIL  | hf6100 battery type
+  q15  typed oddly pass  pass  pass  | qs3308 washer
+  q16  near twin   pass  pass  pass  | Seal kit torque for the HP-400
+  q17  near twin   pass  FAIL  pass  | What is the impeller made of on the HP-200?
+  q18  near twin   pass  pass  pass  | Red light on the HP-200 board and the motor stopped. What do I do?
+  q19  near twin   pass  FAIL  FAIL  | How long is the power cable for the HP-400?
+  q20  near twin   pass  FAIL  FAIL  | Do I need a seal kit that fits the HP-200?
+
+Pass counts by kind (a rough 95% range for the overall rate is in the last row):
+  kind           | keyword  | meaning  | hybrid
+  exact id       | 5/5      | 5/5      | 5/5
+  own words      | 3/5      | 0/5      | 3/5
+  typed oddly    | 3/5      | 1/5      | 2/5
+  near twin      | 5/5      | 2/5      | 3/5
+  all            | 16/20    | 8/20     | 13/20
+  rough range    | 58-92%   | 22-61%   | 43-82%
+
+Change from keyword to hybrid: fixed 0 (none), broke 3 (q14, q19, q20), still failing 4.
+  Example rule 'block if anything that passed before now fails': BLOCKED by q14, q19, q20
+
+Change from keyword to meaning: fixed 0 (none), broke 8 (q06, q07, q09, q13, q14, q17, q19, q20), still failing 4.
+  Example rule 'block if anything that passed before now fails': BLOCKED by q06, q07, q09, q13, q14, q17, q19, q20
+
+What the hybrid search got wrong (question: wanted, got):
+  q08 Can I buy more warranty after the first month? -> wanted WD-8808, got WD-8800
+  q10 The water level in the sump is too low and the pump should stop. -> wanted TK-0392, got ZP-2201
+  q11 xr 4417 d shaft size -> wanted XR-4417-D, got XR-4471-D
+  q12 bn1105 pressure rating -> wanted BN-1105, got TK-0932
+  q14 hf6100 battery type -> wanted HF-6100, got XR-4417-B
+  q19 How long is the power cable for the HP-400? -> wanted VR-5010, got VR-5001
+  q20 Do I need a seal kit that fits the HP-200? -> wanted XR-4471-B, got LM-7720-A
