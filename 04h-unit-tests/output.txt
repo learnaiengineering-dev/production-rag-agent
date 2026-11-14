@@ -1,0 +1,14 @@
+test_asks_for_the_format (test_llmbot.BuildPrompt.test_asks_for_the_format) ... ok
+test_includes_the_message (test_llmbot.BuildPrompt.test_includes_the_message) ... ok
+test_gives_up_after_max_tries (test_llmbot.ExtractPart.test_gives_up_after_max_tries) ... ok
+test_happy_path_calls_the_model_once (test_llmbot.ExtractPart.test_happy_path_calls_the_model_once) ... ok
+test_retries_a_bad_reply_then_succeeds (test_llmbot.ExtractPart.test_retries_a_bad_reply_then_succeeds) ... ok
+test_ignores_extra_whitespace (test_llmbot.ParseReply.test_ignores_extra_whitespace) ... ok
+test_junk_reply_raises (test_llmbot.ParseReply.test_junk_reply_raises) ... ok
+test_missing_part_line_raises (test_llmbot.ParseReply.test_missing_part_line_raises) ... ok
+test_reads_a_good_reply (test_llmbot.ParseReply.test_reads_a_good_reply) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK
