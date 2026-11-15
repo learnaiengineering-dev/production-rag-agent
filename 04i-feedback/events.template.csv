@@ -1,0 +1,3 @@
+id,answer_id,rating,reason,field,raw_reason,note
+f01,a01,up,,,,
+f02,a02,down,missing_source,citation,optional free text the user typed,optional internal note

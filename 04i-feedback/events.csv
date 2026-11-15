@@ -1,0 +1,21 @@
+id,answer_id,rating,reason,field,raw_reason,note
+f01,a01,up,,,,
+f02,a02,down,missing_source,citation,no source given,needed a link to the manual
+f03,a03,up,,,,
+f04,a04,down,wrong_fact,part_number,that part number is wrong,should be XR-4471-D
+f05,a05,up,,,,
+f06,a06,down,missing_source,citation,where is this from?,
+f07,a07,up,,,,
+f08,a08,down,wrong_format,json,not valid json,trailing comma broke our parser
+f09,a09,up,,,,
+f10,a10,down,missing_source,citation,didn't cite anything,
+f11,a11,up,,,,
+f12,a12,down,outdated,date,this is the old catalog,price changed in 2026
+f13,a13,up,,,,
+f14,a14,down,wrong_fact,part_number,the number looks off,
+f15,a15,up,,,,
+f16,a16,down,missing_source,citation,missing citation,
+f17,a17,up,,,,
+f18,a18,up,,,,
+f19,a19,up,,,,
+f20,a20,up,,,,

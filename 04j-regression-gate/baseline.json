@@ -1,0 +1,55 @@
+{
+ "config": {
+  "min_token_len": 1
+ },
+ "results": [
+  {
+   "id": "g01",
+   "passed": true
+  },
+  {
+   "id": "g02",
+   "passed": true
+  },
+  {
+   "id": "g03",
+   "passed": true
+  },
+  {
+   "id": "g04",
+   "passed": true
+  },
+  {
+   "id": "g05",
+   "passed": true
+  },
+  {
+   "id": "g06",
+   "passed": true
+  },
+  {
+   "id": "g07",
+   "passed": true
+  },
+  {
+   "id": "g08",
+   "passed": true
+  },
+  {
+   "id": "g09",
+   "passed": true
+  },
+  {
+   "id": "g10",
+   "passed": true
+  },
+  {
+   "id": "g11",
+   "passed": true
+  },
+  {
+   "id": "g12",
+   "passed": true
+  }
+ ]
+}

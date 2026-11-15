@@ -1,0 +1,9 @@
+retrieval regression gate
+================================================
+baseline config : {'min_token_len': 1}
+current config  : {'min_token_len': 1}
+pass: baseline 12/12  ->  current 12/12
+fixed: -
+broke: -
+
+OK: nothing that passed before is failing now. Safe to merge.

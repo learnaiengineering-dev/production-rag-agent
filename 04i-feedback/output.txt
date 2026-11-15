@@ -1,0 +1,19 @@
+Day 14 - feedback that tells you why
+========================================================
+
+What a thumbs-only system gives you:
+  8 of 20 answers got a thumbs-down (40%).
+  Something is wrong 40% of the time. What? No idea.
+
+What a reason you can count gives you:
+   4  missing_source -> retrieval & citations
+   2  wrong_fact     -> the source data (or retrieval)
+   1  wrong_format   -> output parsing / schema
+   1  outdated       -> re-indexing / freshness
+
+  Top reason: missing_source (4 of 8 downvotes) -> fix retrieval & citations.
+  Now you know where to look first.
+
+Why the reason must be an enum, not free text:
+  Same 8 downvotes, stored as free text: 8 different strings - nothing to count.
+  Stored as an enum: 4 buckets you can rank.

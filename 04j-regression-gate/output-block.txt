@@ -1,0 +1,10 @@
+retrieval regression gate
+================================================
+baseline config : {'min_token_len': 1}
+current config  : {'min_token_len': 3}
+pass: baseline 12/12  ->  current 10/12
+fixed: -
+broke: ['g01', 'g10']
+
+BLOCKED: 2 question(s) passed before and fail now: g01, g10
+A change can improve things or leave them the same - it must not break what worked.

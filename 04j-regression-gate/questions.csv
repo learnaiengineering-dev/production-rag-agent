@@ -1,0 +1,13 @@
+id,tag,question,expected
+g01,exact id,XR-4471-D,XR-4471-D
+g02,exact id,XR-4417-B,XR-4417-B
+g03,exact id,TK-0932,TK-0932
+g04,exact id,TK-0392,TK-0392
+g05,own words,seal kit for the HP-400,XR-4471-D
+g06,own words,impeller for the HP-200,XR-4417-B
+g07,own words,pressure switch that cuts off at 4.5 bar,TK-0932
+g08,own words,float switch for the sump,TK-0392
+g09,exact id,XR-4471-B,XR-4471-B
+g10,exact id,XR-4417-D,XR-4417-D
+g11,own words,stainless steel impeller for the HP-400,XR-4417-D
+g12,own words,seal kit for the HP-200,XR-4471-B
