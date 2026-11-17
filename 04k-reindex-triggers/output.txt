@@ -1,0 +1,29 @@
+re-index triggers
+================================================
+index built from parts_v1.txt: 20 documents
+source today (parts.txt):      20 documents
+
+BEFORE re-indexing
+  Q: How long does the standard warranty last?
+     -> WD-8800: Standard warranty. It covers manufacturing faults for 24 months. Keep your invoice.
+     [STALE: the source has changed]
+  Q: Which outlet hose should I order?
+     -> BN-1105: Outlet hose, 25 mm, rated to 6 bar.
+     [STALE: removed from the source]
+
+content-hash check
+  changed  : ['WD-8800']
+  added    : ['BN-1106']
+  removed  : ['BN-1105']
+  unchanged: 18
+  re-indexed 2, deleted 1, left 18 alone (a full rebuild would redo all 20)
+
+AFTER re-indexing
+  Q: How long does the standard warranty last?
+     -> WD-8800: Standard warranty. It covers manufacturing faults for 36 months. Keep your invoice.
+     [fresh]
+  Q: Which outlet hose should I order?
+     -> BN-1106: Outlet hose, 32 mm, rated to 8 bar. It replaces BN-1105, which is discontinued.
+     [fresh]
+
+check again: nothing has changed since the last sync
