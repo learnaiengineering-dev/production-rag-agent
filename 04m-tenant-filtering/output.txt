@@ -1,0 +1,42 @@
+multi-tenant filtering
+============================================================
+18 documents (6 Acme, 6 Bayside, 6 shared), 14 questions, top 3
+
+search                  leaked  wrong #1  answered   (of 14)
+no tenant filter            12         7        14
+filter after top 3           0         0        14
+filter in the query          0         0        14
+
+with only the top result (k=1):
+filter after top 1           0         0         7
+filter in the query          0         0        14
+filter after top 1 left 7 of 14 questions with no result at all
+
+leaked   = another customer's document in the top 3
+wrong #1 = the top result belongs to another customer
+answered = the right document is in what the user gets
+
+examples with no filter (top result is the other customer's):
+  acme     asks: What discount do we get on seal kits and impellers?
+           gets bayside-01: Bayside Plumbing contract: 8% discount on seal kits and impellers. Payment terms net 14, priority shipping.
+  acme     asks: What are your support hours for urgent pump failures?
+           gets bayside-02: Bayside Plumbing support hours: 24/7 phone support for urgent pump failures. Your account manager is Sam Okafor.
+  acme     asks: Where do deliveries go and what time?
+           gets bayside-06: Bayside Plumbing delivery address: front counter. Deliveries any time on weekdays.
+  bayside  asks: What discount do we get on seal kits?
+           gets acme-01: Acme Pumps contract: 12% discount on seal kits. Payment terms net 30.
+  bayside  asks: Who is our account manager?
+           gets acme-02: Acme Pumps support hours: weekdays 8am to 6pm. Your account manager is Dana Reyes.
+  bayside  asks: When did our impeller order ship?
+           gets acme-03: Acme Pumps order 7781: 40 HP-200 shaft seal kits, shipped 3 November, tracking AP-7781.
+  bayside  asks: Can we return unused parts for a refund?
+           gets acme-04: Acme Pumps returns: unused parts can be returned within 60 days for a full refund.
+
+filter after top 1 - no leak, but these got nothing back:
+  acme     What discount do we get on seal kits and impellers?
+  acme     What are your support hours for urgent pump failures?
+  acme     Where do deliveries go and what time?
+  bayside  What discount do we get on seal kits?
+  bayside  Who is our account manager?
+  bayside  When did our impeller order ship?
+  bayside  Can we return unused parts for a refund?

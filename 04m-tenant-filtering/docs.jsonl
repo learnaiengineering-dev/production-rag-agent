@@ -1,0 +1,18 @@
+{"id": "acme-01", "tenant": "acme", "text": "Acme Pumps contract: 12% discount on seal kits. Payment terms net 30."}
+{"id": "acme-02", "tenant": "acme", "text": "Acme Pumps support hours: weekdays 8am to 6pm. Your account manager is Dana Reyes."}
+{"id": "acme-03", "tenant": "acme", "text": "Acme Pumps order 7781: 40 HP-200 shaft seal kits, shipped 3 November, tracking AP-7781."}
+{"id": "acme-04", "tenant": "acme", "text": "Acme Pumps returns: unused parts can be returned within 60 days for a full refund."}
+{"id": "acme-05", "tenant": "acme", "text": "Acme Pumps price list: HP-200 impeller 84 dollars, HP-200 seal kit 31 dollars."}
+{"id": "acme-06", "tenant": "acme", "text": "Acme Pumps delivery address: warehouse 2, dock B. Deliveries before 2pm only."}
+{"id": "bayside-01", "tenant": "bayside", "text": "Bayside Plumbing contract: 8% discount on seal kits and impellers. Payment terms net 14, priority shipping."}
+{"id": "bayside-02", "tenant": "bayside", "text": "Bayside Plumbing support hours: 24/7 phone support for urgent pump failures. Your account manager is Sam Okafor."}
+{"id": "bayside-03", "tenant": "bayside", "text": "Bayside Plumbing order 7790: 12 HP-400 impellers and 20 HP-400 shaft seal kits, shipped 5 November, tracking BP-7790."}
+{"id": "bayside-04", "tenant": "bayside", "text": "Bayside Plumbing returns: unused parts can be returned within 30 days for store credit, not a refund."}
+{"id": "bayside-05", "tenant": "bayside", "text": "Bayside Plumbing price list: HP-400 impeller 112 dollars, HP-400 seal kit 39 dollars, HP-200 seal kit 33 dollars."}
+{"id": "bayside-06", "tenant": "bayside", "text": "Bayside Plumbing delivery address: front counter. Deliveries any time on weekdays."}
+{"id": "shared-01", "tenant": "shared", "text": "XR-4471-B shaft seal kit for the HP-200 pump. Replace it when water drips from the housing near the shaft."}
+{"id": "shared-02", "tenant": "shared", "text": "XR-4471-D shaft seal kit for the HP-400 pump. Replace it when water drips from the housing near the shaft."}
+{"id": "shared-03", "tenant": "shared", "text": "XR-4417-B impeller for the HP-200 pump, brass. Replace it if the pump is noisy or the flow is weak."}
+{"id": "shared-04", "tenant": "shared", "text": "XR-4417-D impeller for the HP-400 pump, stainless steel. Replace it if the pump is noisy or the flow is weak."}
+{"id": "shared-05", "tenant": "shared", "text": "ZP-2201 priming kit. If the pump runs but moves no water, it has lost its prime. Fill the housing and restart."}
+{"id": "shared-06", "tenant": "shared", "text": "WD-8800 standard warranty. It covers manufacturing faults. Keep your invoice."}

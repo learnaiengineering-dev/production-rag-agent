@@ -1,0 +1,15 @@
+tenant,question,expected
+acme,What discount do we get on seal kits and impellers?,acme-01
+acme,What are your support hours for urgent pump failures?,acme-02
+acme,When did our seal kit order ship and what is the tracking number?,acme-03
+acme,Can we return unused parts for a refund?,acme-04
+acme,How much is an HP-200 seal kit?,acme-05
+acme,Where do deliveries go and what time?,acme-06
+acme,The pump runs but moves no water. What do I do?,shared-05
+bayside,What discount do we get on seal kits?,bayside-01
+bayside,Who is our account manager?,bayside-02
+bayside,When did our impeller order ship?,bayside-03
+bayside,Can we return unused parts for a refund?,bayside-04
+bayside,How much is an HP-400 impeller?,bayside-05
+bayside,What time can deliveries arrive?,bayside-06
+bayside,Which impeller fits the HP-400 pump?,shared-04
