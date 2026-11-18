@@ -1,0 +1,12 @@
+INFO chat m01 user=Hi, I'm Priya Shah, my email is [EMAIL] and my order hasn't arrived.
+INFO chat m02 user=Call me on [PHONE] if the pump is back in stock.
+INFO chat m03 user=My card [CARD] was charged twice for order 4417 2286 0091.
+INFO chat m04 user=Please send the replacement seal to 42 Banksia Street, Ringwood VIC 3134.
+INFO chat m05 user=Reset the login for [EMAIL], the code isn't arriving.
+INFO chat m06 user=This is Marcus Webb from Webb Plumbing, our office number is [PHONE].
+INFO chat m07 user=Here's the key we use for the integration: [SECRET]
+INFO chat m08 user=Refund to the Mastercard ending 4444 please, the full number is [CARD].
+INFO chat m09 user=My partner Aisha will pick it up, her mobile is [PHONE].
+INFO chat m10 user=Is the HP-400 seal kit XR-4471-D compatible with the 2019 model?
+INFO chat m11 user=I'm at unit 3/18 Ocean Street, Bondi, and my email is [EMAIL].
+INFO chat m12 user=Ticket from [EMAIL] about warranty WD-8800, phone [PHONE].
