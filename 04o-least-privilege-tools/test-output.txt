@@ -1,0 +1,10 @@
+test_big_refund_waits_for_a_person (test_policy.LeastPrivilege.test_big_refund_waits_for_a_person) ... ok
+test_every_job_call_still_runs (test_policy.LeastPrivilege.test_every_job_call_still_runs) ... ok
+test_no_injected_call_runs (test_policy.LeastPrivilege.test_no_injected_call_runs) ... ok
+test_paths_cannot_climb_out (test_policy.LeastPrivilege.test_paths_cannot_climb_out) ... ok
+test_sql_is_read_only (test_policy.LeastPrivilege.test_sql_is_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
