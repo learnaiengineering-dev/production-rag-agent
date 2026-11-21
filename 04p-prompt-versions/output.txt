@@ -1,0 +1,38 @@
+version prompts like code: support-answer v1 -> v2
+==================================================================
+
+1. the change, as a diff (the 'tidy up the wording' edit)
+
+  --- v1.txt
+  +++ v2.txt
+  -You answer customer questions for Pumpco using only the help docs below.
+  -Answer in one or two sentences, in plain English.
+  -If the docs don't cover the question, say "I don't know" and offer to pass it to a person.
+  +You're Pumpco's friendly support assistant.
+  +Using the help docs below, answer briefly and in plain English.
+
+2. eval before release: 12 questions, 4 the docs don't cover
+
+  version  hash           all   covered   not covered
+  v1       54af406f    12 of 12    8 of 8       4 of 4
+  v2       b65c7cb5     8 of 12    8 of 8       0 of 4
+
+  gate: v2 scores 8, live v1 scores 12 -> BLOCKED, v1 stays live
+
+  what v2 said to questions the docs don't cover:
+    Do you sell pumps in Canada?                         -> [returns] guessed
+    Can I pay with cryptocurrency?                       -> [refunds] guessed
+    Who is your CEO?                                     -> [refunds] guessed
+    What's the noise level of the HP-400 in decibels?    -> [refunds] guessed
+
+3. every answer is logged with the prompt's version and hash
+  {"prompt": "support-answer", "version": "v1", "hash": "54af406f", "question": "How long do refunds take to reach my card?", "doc": "refunds"}
+  {"prompt": "support-answer", "version": "v1", "hash": "54af406f", "question": "Can I return a pump I haven't used?", "doc": "returns"}
+  {"prompt": "support-answer", "version": "v2", "hash": "b65c7cb5", "question": "Do you sell pumps in Canada?", "doc": "returns"}
+  {"prompt": "support-answer", "version": "v2", "hash": "b65c7cb5", "question": "Can I pay with cryptocurrency?", "doc": "refunds"}
+
+4. a released version can't change quietly
+  refused: support-answer v1 changed after release (hash ba904eaf, locked 54af406f). Make a new version instead.
+
+5. rollback is one line: prompts.lock.json -> "live": "v1"
+  live now: support-answer v1 (54af406f)

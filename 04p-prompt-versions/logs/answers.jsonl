@@ -1,0 +1,4 @@
+{"prompt": "support-answer", "version": "v1", "hash": "54af406f", "question": "How long do refunds take to reach my card?", "doc": "refunds"}
+{"prompt": "support-answer", "version": "v1", "hash": "54af406f", "question": "Can I return a pump I haven't used?", "doc": "returns"}
+{"prompt": "support-answer", "version": "v2", "hash": "b65c7cb5", "question": "Do you sell pumps in Canada?", "doc": "returns"}
+{"prompt": "support-answer", "version": "v2", "hash": "b65c7cb5", "question": "Can I pay with cryptocurrency?", "doc": "refunds"}

@@ -1,0 +1,9 @@
+{
+ "support-answer": {
+  "live": "v1",
+  "versions": {
+   "v1": "54af406f72c9a1d1b2731a1ec914b741ec3b747bbfbf18c6f09f44846af36291",
+   "v2": "b65c7cb5d06e94f6ead37b086b485c565b9e5f109d8020aff48ad7421f4175c3"
+  }
+ }
+}

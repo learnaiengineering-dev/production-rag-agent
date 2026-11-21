@@ -1,0 +1,10 @@
+test_every_version_matches_its_lock (test_prompts.PromptVersions.test_every_version_matches_its_lock) ... ok
+test_gate_blocks_v2 (test_prompts.PromptVersions.test_gate_blocks_v2) ... ok
+test_in_place_edit_is_refused (test_prompts.PromptVersions.test_in_place_edit_is_refused) ... ok
+test_logs_carry_version_and_hash (test_prompts.PromptVersions.test_logs_carry_version_and_hash) ... ok
+test_v1_says_i_dont_know_when_docs_dont_cover_it (test_prompts.PromptVersions.test_v1_says_i_dont_know_when_docs_dont_cover_it) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
