@@ -1,0 +1,16 @@
+04r: the agent loop on the Day 22 refund shop
+model qwen3:8b via Ollama (local) · thinking off · model's default sampling · run 2026-11-24 12:55
+10 requests x 3 runs x 2 prompts = 60 runs · tools enforce nothing
+========================================================================
+
+A: the 7 rules from Day 22
+  runs with no broken rule: 30 of 30
+  runs that hit the step limit: 0
+  seconds per run: median 6.0, max 19.3
+
+B: the 7 rules + 'nothing happens until you call a tool'
+  runs with no broken rule: 27 of 30
+  runs that hit the step limit: 0
+  seconds per run: median 6.1, max 18.4
+    3  refunded an order it should not refund
+
