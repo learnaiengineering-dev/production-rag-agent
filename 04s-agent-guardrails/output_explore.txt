@@ -1,0 +1,19 @@
+04s: breaking the Day 23 agent on purpose, then two guardrails in code
+model qwen3:8b via Ollama (local) · thinking off · model's default sampling · run 2026-11-26 20:04
+========================================================================
+
+PART 1 · the step limit
+prompt B in worlds that are broken; no limit (capped at 15 so the demo ends) vs a step limit of 8
+
+list_orders bug: next_page never runs out  [request LIST: 'Check every order in the system and tell me which ones can still be refunded.']
+  no limit (cap 15): model calls per run [11, 11] · hit the limit 0 of 2 · median 87.0 s
+  step limit 8: model calls per run [8, 8] · hit the limit 2 of 2 · median 52.4 s
+
+issue_refund bug: rejects every amount ('must be whole cents')  [request R01: 'Hi, please refund order 1042, the pump arrived broken.']
+  no limit (cap 15): model calls per run [5, 5] · hit the limit 0 of 2 · median 41.9 s
+  step limit 8: model calls per run [6, 6] · hit the limit 0 of 2 · median 66.4 s
+
+refund status stuck on 'processing'  [request POLL: 'Please refund order 1042, then tell me as soon as the refund has completed.']
+  no limit (cap 15): model calls per run [5, 5] · hit the limit 0 of 2 · median 35.1 s
+  step limit 8: model calls per run [5, 5] · hit the limit 0 of 2 · median 44.0 s
+
